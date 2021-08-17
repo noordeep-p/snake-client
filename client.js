@@ -23,6 +23,11 @@ const connect = function() {
   conn.on("connect", () => {
     conn.write("Name: NSP");
   });
+
+  // folowing code is used as an example exercise to test sanke moves but is hard coded and thus commented out
+  // conn.on("connect", () => {
+  //   conn.write("Move: up");
+  // });
   
   return conn;
 };
