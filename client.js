@@ -19,6 +19,10 @@ const connect = function() {
   conn.on("connect", () => {
     console.log("Connection with server established!");
   });
+
+  conn.on("connect", () => {
+    conn.write("Name: NSP");
+  });
   
   return conn;
 };
