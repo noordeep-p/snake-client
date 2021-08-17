@@ -7,11 +7,17 @@ const connect = function() {
     host: "localhost",
     port: 50541
   });
+
   // interpret the data incoming as text
 
   conn.setEncoding("utf8");
+
   conn.on("data", (data) => {
     console.log("Server says:", data);
+  });
+
+  conn.on("connect", () => {
+    console.log("Connection with server established!");
   });
   
   return conn;
