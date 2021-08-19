@@ -17,22 +17,22 @@ const setupInput = function(conn) {
       process.exit();
     }
     if (key === "w") {
-      connection.push("Move: up");
+      connection.write("Move: up");
     }
     if (key === 's') {
-      connection.push("Move: down");
+      connection.write("Move: down");
     }
     if (key === "d") {
-      connection.push('Move: right');
+      connection.write('Move: right');
     }
     if (key === "a") {
-      connection.push('Move: left');
+      connection.write('Move: left');
     }
     if (key === "q") {
-      connection.push("Say: HI!");
+      connection.write("Say: HI!");
     }
     if (key === "e") {
-      connection.push("Say: I WIN!");
+      connection.write("Say: I WIN!");
     }
   };
   return stdin;
