@@ -14,6 +14,10 @@ const connect = function() {
   conn.setEncoding("utf8");
 
   conn.on("data", (data) => {
+    console.log(`Server says: ${data}`);
+  });
+
+  conn.on("data", (data) => {
     conn.write(data);
   });
 
